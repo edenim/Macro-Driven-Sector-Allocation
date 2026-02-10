@@ -120,6 +120,17 @@ regimes and between Technology and non-Technology sectors.
 - R script: `r/statistical_tests.R`
 - Input data: `analysis_data.csv` (exported from Python)
 
+Using Welch’s two-sample t-test, the difference in average monthly returns
+between Technology and non-Technology sectors during falling interest rate
+periods was found to be marginally significant (p ≈ 0.07). While the direction
+of the effect suggests relatively stronger performance outside the Technology
+sector, the result does not meet conventional 5% significance thresholds.
+
+This indicates that observed differences should be interpreted cautiously,
+reinforcing the importance of combining statistical validation with
+descriptive and economic reasoning.
+
+
 
 ## Project Structure
 
