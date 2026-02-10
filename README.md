@@ -135,4 +135,4 @@ descriptive and economic reasoning.
 ## Project Structure
 
 - `python`: Data collection, analysis, and strategy simulation
-- `r`: Statistical validation 
+- `r`: Add R-based statistical validation and interpretation
