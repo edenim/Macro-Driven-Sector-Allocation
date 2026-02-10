@@ -111,6 +111,16 @@ mask intra-month dynamics and stock-specific effects. Future research could
 extend the framework by incorporating firm-level data, alternative macroeconomic
 indicators, or international market comparisons.
 
+## Statistical Validation (R)
+
+To validate the robustness of the findings, statistical tests were conducted in R.
+Two-sample t-tests were used to evaluate differences in returns across interest rate
+regimes and between Technology and non-Technology sectors.
+
+- R script: `r/statistical_tests.R`
+- Input data: `analysis_data.csv` (exported from Python)
+
+
 ## Project Structure
 
 - `python`: Data collection, analysis, and strategy simulation
