@@ -1,4 +1,4 @@
-# Sector Allocation Strategy under Changing Interest Rates
+# A Regime-Based Sector Allocation Strategy under Changing Interest Rates
 
 ## Project Overview
 This project analyzes how changes in interest rates affect sector-level stock performance.
