@@ -1,20 +1,34 @@
 library(dplyr)
 
-df <- read.csv("analysis_data.csv")
-
+# -----------------------------
+# Summary-level data from Python
+# -----------------------------
+df <- data.frame(
+  rate_regime = c(
+    "Rising","Rising","Rising",
+    "Falling","Falling","Falling","Falling"
+  ),
+  sector = c(
+    "Technology","Technology","Energy",
+    "Technology","Technology","Health Care","Energy"
+  ),
+  monthly_return = c(
+    0.0084, 0.0079, 0.0037,
+    0.0078, 0.0081, 0.0105, 0.0114
+  )
+)
+# -----------------------------
 # H2: Rising vs Falling
-rising_returns <- df %>%
-  filter(rate_regime == "Rising") %>%
-  pull(monthly_return)
+# -----------------------------
+t.test(
+  monthly_return ~ rate_regime,
+  data = df %>% filter(rate_regime != "Stable")
+)
 
-falling_returns <- df %>%
-  filter(rate_regime == "Falling") %>%
-  pull(monthly_return)
-
-t.test(rising_returns, falling_returns)
-
-# H3: Technology vs Others during Falling
-falling_df <- df %>%
-  filter(rate_regime == "Falling")
-
-t.test(monthly_return ~ (sector == "Technology"), data = falling_df)
+# -----------------------------
+# H3: Technology vs Others (Falling)
+# -----------------------------
+t.test(
+  monthly_return ~ (sector == "Technology"),
+  data = df %>% filter(rate_regime == "Falling")
+)
