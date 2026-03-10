@@ -1,4 +1,4 @@
-# 📈 Regime-Based Sector Allocation Strategy
+# Regime-Based Sector Allocation Strategy
 > Analyzing how interest rate environments shape equity sector performance — and what that means for smarter allocation
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 Interest rates move markets — but not all sectors respond the same way.
 
@@ -19,7 +19,7 @@ This project examines how **changing interest rate regimes** (rising, falling, s
 
 ---
 
-## 🔬 Hypotheses
+## Hypotheses
 
 | # | Hypothesis |
 |---|-----------|
@@ -30,7 +30,7 @@ This project examines how **changing interest rate regimes** (rising, falling, s
 
 ---
 
-## 📂 Data Sources
+## Data Sources
 
 | Data | Source |
 |------|--------|
@@ -43,14 +43,14 @@ This project examines how **changing interest rate regimes** (rising, falling, s
 - **Frequency:** Monthly data to align rate movements with sector returns
 - **Period:** 2005 – present (covers multiple full rate cycles)
 - **Regime Classification:**
-  - 📈 **Rising** — Fed Funds Rate increased vs. prior month
-  - 📉 **Falling** — Fed Funds Rate decreased vs. prior month
-  - ➡️ **Stable** — No change in rate
+  - **Rising** — Fed Funds Rate increased vs. prior month
+  - **Falling** — Fed Funds Rate decreased vs. prior month
+  - **Stable** — No change in rate
 - **Returns:** ETF total return proxies with dividends reinvested
 
 ---
 
-## 📊 Findings
+## Findings
 
 ### H1 — Asymmetric Sector Response ✅ Confirmed
 
@@ -80,7 +80,7 @@ Sectors with higher interest rate sensitivity exhibit elevated volatility. Sharp
 
 ---
 
-## 🧪 Statistical Validation (R)
+## Statistical Validation (R)
 
 Robustness was tested using **Welch's two-sample t-tests** in R, comparing returns across regimes and between Technology vs. non-Technology sectors.
 
@@ -95,7 +95,7 @@ This reinforces the need to combine **statistical validation with economic reaso
 
 ---
 
-## 💡 Strategic Implications
+## Strategic Implications
 
 A few key takeaways for regime-based allocation:
 
@@ -106,7 +106,7 @@ A few key takeaways for regime-based allocation:
 
 ---
 
-## ⚠️ Limitations & Future Work
+## Limitations & Future Work
 
 - Analysis uses **sector-level ETF proxies** and monthly frequency, which may mask intra-month dynamics and stock-specific effects
 - Future extensions could incorporate:
@@ -116,7 +116,7 @@ A few key takeaways for regime-based allocation:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 regime-sector-allocation/
