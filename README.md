@@ -131,22 +131,3 @@ regime-sector-allocation/
 │
 └── README.md
 ```
-
----
-
-## 📦 Requirements
-
-**Python**
-```
-pandas
-numpy
-matplotlib
-seaborn
-yfinance
-fredapi
-```
-
-**R**
-```r
-install.packages(c("tidyverse", "broom"))
-```
