@@ -1,138 +1,152 @@
-# A Regime-Based Sector Allocation Strategy under Changing Interest Rates
+# 📈 Regime-Based Sector Allocation Strategy
+> Analyzing how interest rate environments shape equity sector performance — and what that means for smarter allocation
 
-## Project Overview
-This project analyzes how changes in interest rates affect sector-level stock performance.
-The goal is to provide a consulting-style recommendation on sector allocation strategies
-under different interest rate environments.
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
+![R](https://img.shields.io/badge/R-Statistical%20Validation-276DC3?logo=r&logoColor=white)
+![Data](https://img.shields.io/badge/Data-FRED%20%7C%20S%26P%20500%20ETFs-lightgrey)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-## Business Question
-In different interest rate environments, which equity sectors should be overweighted
-or underweighted to optimize risk-adjusted returns?
+---
 
-## Hypotheses
-H1. Interest rate changes affect sector performance asymmetrically; not all sectors respond
-to interest rate movements in the same way.
+## 📌 Overview
 
-H2. During rising interest rate environments, Financials and Energy sectors outperform
-the overall market.
+Interest rates move markets — but not all sectors respond the same way.
 
-H3. During declining interest rate environments, Technology-oriented sectors outperform
-other sectors.
+This project examines how **changing interest rate regimes** (rising, falling, stable) affect **sector-level stock performance** across the S&P 500. The goal is to deliver a **consulting-style sector allocation recommendation** grounded in empirical analysis.
 
-H4. Sectors that are more sensitive to interest rate changes exhibit higher volatility,
-indicating the need for risk-adjusted allocation strategies.
+### Business Question
+> *In different interest rate environments, which equity sectors should be overweighted or underweighted to optimize risk-adjusted returns?*
 
-## Data Sources
+---
 
-This project uses publicly available financial and macroeconomic data to ensure
-reproducibility and transparency.
+## 🔬 Hypotheses
 
-- **Interest Rate Data**: Federal Funds Rate (monthly), sourced from the Federal Reserve Economic Data (FRED).
-- **Equity Sector Data**: S&P 500 sector-level ETF prices (e.g., XLK, XLF, XLE, etc.).
-- **Market Benchmark**: S&P 500 Index (used for relative performance comparison).
+| # | Hypothesis |
+|---|-----------|
+| H1 | Interest rate changes affect sector performance **asymmetrically** |
+| H2 | During **rising** rate environments, Financials and Energy outperform the market |
+| H3 | During **declining** rate environments, Technology-oriented sectors outperform |
+| H4 | Rate-sensitive sectors exhibit **higher volatility**, requiring risk-adjusted allocation |
 
-## Data Design & Assumptions
+---
 
-- The analysis is conducted using **monthly data** to align interest rate movements
-  with sector-level stock performance.
-- The study period spans from **2005 to the most recent available data**, capturing
-  multiple interest rate cycles.
-- Interest rate environments are classified as:
-  - **Rising**: Federal Funds Rate increased compared to the previous month.
-  - **Falling**: Federal Funds Rate decreased compared to the previous month.
-  - **Stable**: No change in the interest rate.
-- Sector performance is measured using **ETF total return proxies**, assuming dividends
-  are reinvested.
+## 📂 Data Sources
 
-## Preliminary Findings (H1)
+| Data | Source |
+|------|--------|
+| **Interest Rates** | Federal Funds Rate (monthly) — [FRED](https://fred.stlouisfed.org/) |
+| **Equity Sectors** | S&P 500 sector ETFs (XLK, XLF, XLE, etc.) |
+| **Benchmark** | S&P 500 Index |
 
-The analysis confirms that sector performance varies meaningfully across interest rate regimes.
-Technology stocks perform strongest during stable rate environments, while Energy and defensive
-sectors show relatively stronger performance during declining rate periods. These results
-suggest that sector allocation strategies should be adapted to the prevailing interest rate
-regime rather than applied uniformly.
+### Design & Assumptions
 
-## Findings on Rising Rate Environments (H2)
+- **Frequency:** Monthly data to align rate movements with sector returns
+- **Period:** 2005 – present (covers multiple full rate cycles)
+- **Regime Classification:**
+  - 📈 **Rising** — Fed Funds Rate increased vs. prior month
+  - 📉 **Falling** — Fed Funds Rate decreased vs. prior month
+  - ➡️ **Stable** — No change in rate
+- **Returns:** ETF total return proxies with dividends reinvested
 
-H2 hypothesized that Financials and Energy sectors would outperform the broader market
-during rising interest rate environments.
+---
 
-However, the empirical results indicate that this relationship is not consistent.
-While Financials and Energy perform adequately in certain periods, they do not
-systematically dominate sector returns during rate hikes. In several instances,
-Technology and defensive sectors exhibit comparable or superior performance.
+## 📊 Findings
 
-These findings suggest that rising interest rates alone are insufficient to explain
-sector-level outperformance, and that broader macroeconomic and earnings-related factors
-play a critical role during tightening cycles.
+### H1 — Asymmetric Sector Response ✅ Confirmed
 
-## Findings on Falling Rate Environments (H3)
+Sector performance varies meaningfully across rate regimes. Technology stocks perform strongest during **stable rate environments**, while Energy and defensive sectors show relative strength during **declining rate periods**. This confirms that a one-size-fits-all allocation approach is insufficient.
 
-H3 proposed that Technology-oriented sectors would outperform during declining
-interest rate environments, reflecting improved growth expectations and lower
-discount rates.
+---
 
-The analysis shows that Technology does not uniformly lead sector performance
-during falling rate periods. Instead, sectors such as Energy and Health Care often
-demonstrate strong returns, indicating that rate cuts frequently coincide with
-broader economic transitions rather than directly benefiting growth-oriented sectors.
+### H2 — Financials & Energy in Rising Rate Environments ⚠️ Partially Supported
 
-This suggests that declining interest rates should be interpreted in a broader
-macroeconomic context when forming sector allocation strategies.
+> *Hypothesized: Financials and Energy outperform during rate hikes.*
 
-## Strategic Implications
+The empirical results show **no consistent outperformance** by Financials or Energy during rising rate periods. In several instances, Technology and defensive sectors performed comparably or better. Rising rates alone do not explain sector-level divergence — **broader macroeconomic and earnings dynamics** play an equally critical role.
 
-The findings suggest that sector allocation strategies should not rely solely on the
-direction of interest rate movements. While interest rates influence market conditions,
-sector-level performance is shaped by a combination of macroeconomic dynamics, earnings
-expectations, and regime-specific factors.
+---
 
-A regime-based approach to sector allocation—adjusting exposure based on broader
-interest rate environments rather than fixed assumptions—can provide more flexibility
-than static sector positioning. In particular, Technology and defensive sectors may
-remain competitive even during tightening cycles, while traditional rate-sensitive
-sectors do not consistently dominate returns.
+### H3 — Technology in Falling Rate Environments ⚠️ Partially Supported
 
-These results highlight the importance of adaptive, data-driven allocation frameworks
-when forming investment or strategic recommendations.
+> *Hypothesized: Technology leads during declining rate periods.*
 
-## Risk-Adjusted Performance (H4)
+Technology does not uniformly lead during falling rate environments. Instead, **Energy and Health Care** frequently demonstrated strong returns — likely because rate cuts often coincide with broader economic transitions rather than directly benefiting growth sectors. Context matters.
 
-Evaluating sector strategies based solely on returns can be misleading.
-Incorporating volatility and risk-adjusted metrics such as the Sharpe ratio
-provides a more comprehensive assessment of strategy effectiveness. The
-risk-adjusted analysis reinforces the need to balance performance with
-consistency when comparing allocation strategies.
+---
 
-## Limitations and Future Work
+### H4 — Volatility & Risk-Adjusted Performance ✅ Confirmed
 
-This analysis focuses on sector-level ETF proxies and monthly data, which may
-mask intra-month dynamics and stock-specific effects. Future research could
-extend the framework by incorporating firm-level data, alternative macroeconomic
-indicators, or international market comparisons.
+Sectors with higher interest rate sensitivity exhibit elevated volatility. Sharpe ratio analysis reinforces the need to **balance return potential with consistency** — raw returns alone are a misleading signal for allocation strategy.
 
-## Statistical Validation (R)
+---
 
-To validate the robustness of the findings, statistical tests were conducted in R.
-Two-sample t-tests were used to evaluate differences in returns across interest rate
-regimes and between Technology and non-Technology sectors.
+## 🧪 Statistical Validation (R)
 
-- R script: `r/statistical_tests.R`
-- Input data: `analysis_data.csv` (exported from Python)
+Robustness was tested using **Welch's two-sample t-tests** in R, comparing returns across regimes and between Technology vs. non-Technology sectors.
 
-Using Welch’s two-sample t-test, the difference in average monthly returns
-between Technology and non-Technology sectors during falling interest rate
-periods was found to be marginally significant (p ≈ 0.07). While the direction
-of the effect suggests relatively stronger performance outside the Technology
-sector, the result does not meet conventional 5% significance thresholds.
+```
+r/statistical_tests.R
+Input: analysis_data.csv (exported from Python)
+```
 
-This indicates that observed differences should be interpreted cautiously,
-reinforcing the importance of combining statistical validation with
-descriptive and economic reasoning.
+> During falling rate periods, the difference in average monthly returns between Technology and non-Technology sectors was **marginally significant (p ≈ 0.07)** — directionally suggestive, but below the conventional 5% threshold.
 
+This reinforces the need to combine **statistical validation with economic reasoning** rather than relying on significance alone.
 
+---
 
-## Project Structure
+## 💡 Strategic Implications
 
-- `python`: Data collection, analysis, and strategy simulation
-- `r`: Add R-based statistical validation and interpretation
+A few key takeaways for regime-based allocation:
+
+- **Don't over-rely on rate direction alone** — sector returns are shaped by earnings expectations, macro transitions, and regime-specific dynamics
+- **Technology and defensive sectors** can remain competitive even during tightening cycles
+- **Adaptive, data-driven frameworks** outperform static sector positioning
+- A **regime-based approach** — adjusting exposure to rate environment rather than fixed assumptions — provides meaningful flexibility
+
+---
+
+## ⚠️ Limitations & Future Work
+
+- Analysis uses **sector-level ETF proxies** and monthly frequency, which may mask intra-month dynamics and stock-specific effects
+- Future extensions could incorporate:
+  - Firm-level (stock-level) data
+  - Alternative macro indicators (CPI, yield curve slope, etc.)
+  - International market comparisons
+
+---
+
+## 📁 Project Structure
+
+```
+regime-sector-allocation/
+│
+├── python/               # Data collection, analysis, strategy simulation
+│
+├── r/
+│   └── statistical_tests.R   # Welch t-tests, regime comparisons
+│
+├── data/
+│   └── analysis_data.csv     # Shared input for R validation
+│
+└── README.md
+```
+
+---
+
+## 📦 Requirements
+
+**Python**
+```
+pandas
+numpy
+matplotlib
+seaborn
+yfinance
+fredapi
+```
+
+**R**
+```r
+install.packages(c("tidyverse", "broom"))
+```
