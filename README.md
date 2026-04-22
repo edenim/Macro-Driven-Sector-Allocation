@@ -1,7 +1,6 @@
 # Regime-Based Sector Allocation Strategy
 > Analyzing how interest rate environments shape equity sector performance — and what that means for smarter allocation
 
----
 
 ## Overview
 
