@@ -1,11 +1,6 @@
 # Regime-Based Sector Allocation Strategy
 > Analyzing how interest rate environments shape equity sector performance — and what that means for smarter allocation
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
-![R](https://img.shields.io/badge/R-Statistical%20Validation-276DC3?logo=r&logoColor=white)
-![Data](https://img.shields.io/badge/Data-FRED%20%7C%20S%26P%20500%20ETFs-lightgrey)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-
 ---
 
 ## Overview
